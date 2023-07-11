@@ -35,7 +35,6 @@ class HttpClient
     {
         $this->environment = $environment;
         $this->encoder = new Encoder();
-        $this->curlCls = Curl::class;
     }
 
     /**
@@ -154,11 +153,6 @@ class HttpClient
     protected function getCACertFilePath()
     {
         return null;
-    }
-
-    protected function setCurl(Curl $curl)
-    {
-        $this->curl = $curl;
     }
 
     protected function setEncoder(Encoder $encoder)
